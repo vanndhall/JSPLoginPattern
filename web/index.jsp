@@ -17,7 +17,11 @@
 
 
     <!--<a href="${pageContext.request.contextPath}/hello">Go to hello servlet</a> -->
+    <%
+    if(session.getAttribute("user") != null){
+    response.sendRedirect("todos.jsp");
 
+    }%>skryplet - miejsce gdzie mozna umiescic kod java
   </form>
   </body>
 </html>

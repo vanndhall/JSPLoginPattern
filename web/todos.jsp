@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
+Hello ${sessionScope.user.login} język wyrażeniowy
+Your todos
 
 </body>
 </html>
