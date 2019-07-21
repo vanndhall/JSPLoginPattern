@@ -27,7 +27,7 @@ public class ToDoServlet extends HttpServlet {
 			todosList.add(todo);
 		}
 		request.getSession().setAttribute("todos", todosList);
-		response.sendRedirect(request.getContextPath()+"todos.jsp");
+		response.sendRedirect(request.getContextPath()+"/todos.jsp");
 
 
 	}

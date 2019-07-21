@@ -1,4 +1,5 @@
-<%--
+<%@ page import="model.Todo" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Szymon Mantey
   Date: 21.07.2019
@@ -19,8 +20,24 @@ Your todos
 <form action="todos/add" METHOD="post">
     Zadanie: <input name="task">
     <br>
-    <button name="addtask">Dodaj zadanie</button>
+    <input type="submit" name="addtask">Dodaj zadanie</input>
 </form>
+<br>
+    <%
+     List<Todo> taskList = (List<Todo>) session.getAttribute("todos");
+
+     if( taskList != null){
+  	for(Todo t: taskList){
+    %>
+
+<%= t.getName()  %>
+    <br/>
+<%
+    }
+  }
+%>
+
+
 
 </body>
 </html>
