@@ -11,8 +11,10 @@
     <title>Title</title>
 </head>
 <body>
+<form action="logout">
+<button name="logoffbutton">Wyloguj</button>
 Hello ${sessionScope.user.login} język wyrażeniowy
 Your todos
-
+</form>
 </body>
 </html>
