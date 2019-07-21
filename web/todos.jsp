@@ -1,5 +1,7 @@
 <%@ page import="model.Todo" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--
   Created by IntelliJ IDEA.
   User: Szymon Mantey
   Date: 21.07.2019
@@ -11,7 +13,7 @@
 <head>
     <title>Title</title>
 </head>
-<body>
+<br>
 <form action="logout">
 <button name="logoffbutton">Wyloguj</button>
 Hello ${sessionScope.user.login} język wyrażeniowy
@@ -22,7 +24,21 @@ Your todos
     <br>
     <input type="submit" name="addtask">Dodaj zadanie</input>
 </form>
-<br>
+<c:if test="${sessionScope.todos != null}">
+
+    <c:forEach var="t" items="${sessionScope.todos}">
+
+        <c:out value="${t.name}"></c:out>
+    </br>
+    </c:forEach>
+</c:if>
+
+
+
+
+
+
+<!--<br>
     <%
      List<Todo> taskList = (List<Todo>) session.getAttribute("todos");
 
@@ -37,7 +53,7 @@ Your todos
   }
 %>
 
-
+-->
 
 </body>
 </html>
