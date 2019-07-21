@@ -16,5 +16,11 @@
 Hello ${sessionScope.user.login} język wyrażeniowy
 Your todos
 </form>
+<form action="todos/add" METHOD="post">
+    Zadanie: <input name="task">
+    <br>
+    <button name="addtask">Dodaj zadanie</button>
+</form>
+
 </body>
 </html>

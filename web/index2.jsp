@@ -16,9 +16,6 @@
 
     <button name="subbmit">Zaloguj</button>
 
-
-    <!--<a href="${pageContext.request.contextPath}/hello">Go to hello servlet</a> -->
-
 </form>
 </body>
 </html>
